@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Franco Colapinto - FC43</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-custom navbar-dark">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-logo d-flex align-items-center" href="index.html">
+        <span>FC43</span>
+        <svg class="flag-icon ms-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="24" height="18">
+          <rect width="640" height="480" fill="#74acdf" />
+          <rect width="640" height="160" y="160" fill="#fff" />
+          <circle cx="320" cy="240" r="30" fill="#f6b40e" />
+        </svg>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom active" aria-current="page" href="index.html">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="carreras.html">CARRERAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-xl-6 text-white">
+          <h1 class="hero-title text-wrap">
+            Franco Colapinto:<br>
+            La revolución argentina<br>
+            en la Fórmula 1.
+          </h1>
+          <p class="hero-subtitle">
+            Pasión, velocidad y talento puro...
+          </p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#biografia" class="btn custom-btn-primary fw-bold px-4 py-3">CONOCER TRAYECTORIA</a>
+            <a href="#logros" class="btn custom-btn-outline fw-bold px-4 py-3">VER ESTADÍSTICAS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BIOGRAFÍA SECTION -->
+  <section id="biografia" class="bio-section">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <!-- Text Column -->
+        <div class="col-lg-6">
+          <div class="accent-line-title">
+            <span class="text-primary text-uppercase fw-bold letter-spacing fs-7">BIOGRAFÍA</span>
+          </div>
+          <h2 class="bio-title mt-2 mb-4">De Pilar al mundo.</h2>
+          <p class="bio-text mb-3">
+            Nacido el 27 de mayo de 2003 en Pilar, Buenos Aires, Franco Colapinto descubrió su pasión por el
+            automovilismo desde muy pequeño. Comenzó en el karting argentino, donde rápidamente se destacó por su
+            talento y determinación. Su camino lo llevó a competir en Europa, enfrentándose a los mejores pilotos del
+            mundo.
+          </p>
+          <p class="bio-text mb-3">
+            Tras brillar en la Fórmula 3 y consagrarse en la Fórmula 2, dio el salto a la Fórmula 1 para representar a
+            toda una generación de argentinos que sueñan en grande.
+          </p>
+          
+          <!-- Lista desordenada requerida por la consigna -->
+          <ul class="list-unstyled bio-text mb-4 ps-0">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Fecha de nacimiento:</strong> 27 de mayo de 2003 (Pilar, Buenos Aires)</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Categoría actual:</strong> Fórmula 1 (Williams Racing)</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Debut en F1:</strong> Gran Premio de Italia 2024</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Logro histórico:</strong> Primer piloto argentino en sumar puntos en F1 en 42 años</li>
+          </ul>
+
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a href="carreras.html" class="btn custom-btn-primary fw-bold px-4 py-2">CONOCER MÁS</a>
+            <!-- Enlace externo requerido por la consigna -->
+            <a href="https://www.williamsf1.com" target="_blank" class="text-primary fw-bold text-decoration-none hover-link ms-2">
+              Ver Williams F1 <i class="bi bi-box-arrow-up-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="col-lg-6">
+          <div class="bio-img-wrapper">
+            <img src="img/Colapinto-Boxes-F1-Monza-2024.jpg" alt="Franco Colapinto caminando en el paddock" class="bio-img img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGROS SECTION -->
+  <main>
+    <section id="logros" class="logros-section">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="text-center mb-5 accent-line-center">
+          <span class="text-primary text-uppercase fw-bold letter-spacing fs-7">LOGROS</span>
+          <h2 class="display-5 fw-bold text-dark mt-1">El camino a la máxima.</h2>
+        </header>
+
+        <!-- Cards Grid -->
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1: Karting -->
+          <div class="col-md-6 col-lg-4">
+            <article class="logro-card">
+              <div class="logro-card-body">
+                <div class="logro-icon-circle">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <h3 class="logro-card-title">Karting</h3>
+                <p class="logro-card-text">
+                  Sus primeros pasos en el karting argentino marcaron el inicio de una carrera llena de pasión y
+                  sacrificio.
+                </p>
+              </div>
+              <div class="logro-card-img-wrapper">
+                <img src="img/karting.jpg" alt="Karting Argentina" class="logro-card-img">
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2: Fórmulas Inferiores -->
+          <div class="col-md-6 col-lg-4">
+            <article class="logro-card">
+              <div class="logro-card-body">
+                <div class="logro-icon-circle">
+                  <i class="bi bi-trophy-fill"></i>
+                </div>
+                <h3 class="logro-card-title">Fórmulas Inferiores</h3>
+                <p class="logro-card-text">
+                  Destacado rendimiento en F3 y F2, demostrando velocidad, inteligencia y consistencia frente a la élite
+                  mundial.
+                </p>
+              </div>
+              <div class="logro-card-img-wrapper">
+                <img src="img/f2.jpg" alt="Fórmula 3 y Fórmula 2" class="logro-card-img">
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3: Debut F1 -->
+          <div class="col-md-6 col-lg-4">
+            <article class="logro-card">
+              <div class="logro-card-body">
+                <div class="logro-icon-circle">
+                  <i class="bi bi-flag-fill"></i>
+                </div>
+                <h3 class="logro-card-title">Debut F1</h3>
+                <p class="logro-card-text">
+                  El sueño se hizo realidad. Franco Colapinto debutó en la Fórmula 1, llevando la bandera argentina a lo
+                  más alto.
+                </p>
+              </div>
+              <div class="logro-card-img-wrapper">
+                <img src="img/f1.jpg" alt="Debut Fórmula 1" class="logro-card-img">
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer-custom text-center">
+    <div class="container">
+      <a class="footer-brand d-inline-flex align-items-center text-decoration-none mb-3" href="index.html">
+        <span>FC43</span>
+        <svg class="flag-icon ms-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="24" height="18">
+          <rect width="640" height="480" fill="#74acdf" />
+          <rect width="640" height="160" y="160" fill="#fff" />
+          <circle cx="320" cy="240" r="30" fill="#f6b40e" />
+        </svg>
+      </a>
+      <p class="footer-text mb-1">Proyecto homenaje a Franco Colapinto.</p>
+      <p class="footer-text mb-4">Hecho con HTML, CSS y Bootstrap.</p>
+
+      <!-- Social Media Icons -->
+      <div class="d-flex justify-content-center align-items-center gap-3">
+        <a href="https://instagram.com" target="_blank" class="social-icon-link" aria-label="Instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" class="social-icon-link" aria-label="Twitter"><i
+            class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com" target="_blank" class="social-icon-link" aria-label="YouTube"><i
+            class="bi bi-youtube"></i></a>
+        <a href="https://tiktok.com" target="_blank" class="social-icon-link" aria-label="TikTok"><i
+            class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
