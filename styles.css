@@ -327,11 +327,165 @@ body {
   }
   .hero-section {
     background: linear-gradient(180deg, rgba(9, 14, 23, 0.9) 0%, rgba(9, 14, 23, 0.8) 100%),
-                url('./img/hero.jpg') center center / cover no-repeat;
+                url('./img/6Zv1_s_66_2000x1500__1.jpg') center center / cover no-repeat;
     padding: 120px 0 60px 0;
     min-height: auto;
   }
   .bio-title {
     font-size: 2.2rem;
   }
+}
+
+/* ========================================
+   Carreras Page Styles
+   ======================================== */
+
+.race-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.race-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.circuit-img-wrapper {
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  min-height: 180px;
+}
+
+.circuit-img {
+  max-width: 160px;
+  max-height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.race-info {
+  padding: 1.5rem;
+}
+
+.race-country {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0b1320;
+  margin-bottom: 0.15rem;
+}
+
+.race-gp-name {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.race-date {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  border-right: 1px solid #e2e8f0;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0b1320;
+}
+
+.stat-value.points-scored {
+  color: #0066ff;
+}
+
+.stat-value.dnf {
+  color: #ef4444;
+}
+
+.stat-value.top-ten {
+  color: #22c55e;
+}
+
+.badge-equipo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0066ff, #0047b3);
+  color: #fff;
+}
+
+.summary-card {
+  background: linear-gradient(135deg, #090e17, #0b1f3f);
+  border-radius: 16px;
+  color: #fff;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.summary-stat {
+  text-align: center;
+}
+
+.summary-stat-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.summary-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+.round-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0066ff;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }

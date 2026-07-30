@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-light">
 
   <!-- NAVBAR -->
@@ -19,13 +21,13 @@
       <a class="navbar-brand navbar-brand-logo d-flex align-items-center" href="index.html">
         <span>FC43</span>
         <svg class="flag-icon ms-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="24" height="18">
-          <rect width="640" height="480" fill="#74acdf"/>
-          <rect width="640" height="160" y="160" fill="#fff"/>
-          <circle cx="320" cy="240" r="30" fill="#f6b40e"/>
+          <rect width="640" height="480" fill="#74acdf" />
+          <rect width="640" height="160" y="160" fill="#fff" />
+          <circle cx="320" cy="240" r="30" fill="#f6b40e" />
         </svg>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -45,59 +47,596 @@
   </nav>
 
   <!-- CONTENT -->
-  <main class="container py-5" style="margin-top: 100px; min-height: 70vh;">
-    <div class="text-center my-4 accent-line-center">
-      <span class="text-primary text-uppercase fw-bold letter-spacing fs-7">CALENDARIO & RESULTADOS</span>
-      <h1 class="display-5 fw-bold text-dark mt-1">Temporada de Carreras</h1>
-    </div>
+  <main class="container py-5" style="margin-top: 100px;">
 
-    <div class="row justify-content-center mt-5">
-      <div class="col-lg-10">
-        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
-          <div class="card-body p-4">
-            <h4 class="fw-bold text-dark mb-3"><i class="bi bi-trophy text-primary me-2"></i>Historial Reciente</h4>
-            <div class="table-responsive">
-              <table class="table table-hover align-middle">
-                <thead class="table-dark">
-                  <tr>
-                    <th>Gran Premio</th>
-                    <th>Categoría</th>
-                    <th>Equipo</th>
-                    <th>Resultado</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>GP de Italia (Monza)</strong></td>
-                    <td>Fórmula 1</td>
-                    <td>Williams Racing</td>
-                    <td><span class="badge bg-success">P12 (Debut)</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>GP de Azerbaiyán (Baku)</strong></td>
-                    <td>Fórmula 1</td>
-                    <td>Williams Racing</td>
-                    <td><span class="badge bg-primary">P8 (Puntos)</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>GP de Singapur</strong></td>
-                    <td>Fórmula 1</td>
-                    <td>Williams Racing</td>
-                    <td><span class="badge bg-secondary">P11</span></td>
-                  </tr>
-                  <tr>
-                    <td><strong>GP de Estados Unidos (Austin)</strong></td>
-                    <td>Fórmula 1</td>
-                    <td>Williams Racing</td>
-                    <td><span class="badge bg-primary">P10 (Punto)</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+    <header class="text-center my-4 accent-line-center">
+      <span class="text-primary text-uppercase fw-bold letter-spacing fs-7">TEMPORADA 2026</span>
+      <h1 class="display-5 fw-bold text-dark mt-1">Resultados Carrera por Carrera</h1>
+      <p class="text-muted mt-2">Franco Colapinto #43 · BWT Alpine F1 Team</p>
+    </header>
+
+    <!-- SUMMARY CARD -->
+    <div class="summary-card">
+      <div class="row g-4 align-items-center">
+        <div class="col-6 col-md-3">
+          <div class="summary-stat">
+            <div class="summary-stat-value">11</div>
+            <div class="summary-stat-label">Carreras</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="summary-stat">
+            <div class="summary-stat-value" style="color: #0066ff;">19</div>
+            <div class="summary-stat-label">Puntos</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="summary-stat">
+            <div class="summary-stat-value" style="color: #22c55e;">P6</div>
+            <div class="summary-stat-label">Mejor Resultado</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="summary-stat">
+            <div class="summary-stat-value">12°</div>
+            <div class="summary-stat-label">Campeonato</div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- RACE CARDS -->
+    <div class="row g-4">
+
+      <!-- R1: Australia -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R1</div>
+            <div>
+              <div class="race-country">Australia <span class="ms-1">🇦🇺</span></div>
+              <div class="race-gp-name">GP de Australia · Albert Park</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>8 de Marzo, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/australia.jpg" alt="Circuito Albert Park" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P16</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value">P14</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#22c55e;">+2</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R2: China -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R2</div>
+            <div>
+              <div class="race-country">China <span class="ms-1">🇨🇳</span></div>
+              <div class="race-gp-name">GP de China · Shanghai</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>15 de Marzo, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/china.jpg" alt="Circuito Shanghai" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P12</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value top-ten">P10</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value points-scored">1</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#22c55e;">+2</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R3: Japón -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R3</div>
+            <div>
+              <div class="race-country">Japón <span class="ms-1">🇯🇵</span></div>
+              <div class="race-gp-name">GP de Japón · Suzuka</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>29 de Marzo, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/japon.jpg" alt="Circuito Suzuka" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P15</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value">P16</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#ef4444;">-1</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R4: Miami -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R4</div>
+            <div>
+              <div class="race-country">Miami <span class="ms-1">🇺🇸</span></div>
+              <div class="race-gp-name">GP de Miami · Miami Int. Autodrome</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>3 de Mayo, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/miami.jpg" alt="Circuito Miami" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P8</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value top-ten">P7</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value points-scored">6</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#22c55e;">+1</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R5: Canadá -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R5</div>
+            <div>
+              <div class="race-country">Canadá <span class="ms-1">🇨🇦</span></div>
+              <div class="race-gp-name">GP de Canadá · Gilles Villeneuve</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>24 de Mayo, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/canada.jpg" alt="Circuito Gilles Villeneuve" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P10</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value top-ten">P6</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value points-scored">8</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#22c55e;">+4</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R6: Mónaco -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R6</div>
+            <div>
+              <div class="race-country">Mónaco <span class="ms-1">🇲🇨</span></div>
+              <div class="race-gp-name">GP de Mónaco · Monte Carlo</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>7 de Junio, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/monaco.jpg" alt="Circuito de Mónaco" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P14</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value dnf">NC</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#94a3b8;">—</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R7: España -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R7</div>
+            <div>
+              <div class="race-country">España <span class="ms-1">🇪🇸</span></div>
+              <div class="race-gp-name">GP de España · Barcelona-Catalunya</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>14 de Junio, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/espana.jpg" alt="Circuito de Barcelona" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P13</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value top-ten">P8</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value points-scored">4</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#22c55e;">+5</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R8: Austria -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R8</div>
+            <div>
+              <div class="race-country">Austria <span class="ms-1">🇦🇹</span></div>
+              <div class="race-gp-name">GP de Austria · Red Bull Ring</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>28 de Junio, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/austria.jpg" alt="Circuito Red Bull Ring" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P16</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value">P15</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#22c55e;">+1</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R9: Gran Bretaña -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R9</div>
+            <div>
+              <div class="race-country">Gran Bretaña <span class="ms-1">🇬🇧</span></div>
+              <div class="race-gp-name">GP de Gran Bretaña · Silverstone</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>5 de Julio, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/gran_bretana.jpg" alt="Circuito Silverstone" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P19</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value dnf">NC</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#94a3b8;">—</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R10: Bélgica -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R10</div>
+            <div>
+              <div class="race-country">Bélgica <span class="ms-1">🇧🇪</span></div>
+              <div class="race-gp-name">GP de Bélgica · Spa-Francorchamps</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>19 de Julio, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/belgica.jpg" alt="Circuito Spa-Francorchamps" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P11</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value top-ten">P10</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value points-scored">1</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#22c55e;">+1</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- R11: Hungría -->
+      <div class="col-md-6 col-xl-4">
+        <article class="race-card h-100 d-flex flex-column">
+          <div class="d-flex align-items-start gap-3 p-3 pb-0">
+            <div class="round-badge">R11</div>
+            <div>
+              <div class="race-country">Hungría <span class="ms-1">🇭🇺</span></div>
+              <div class="race-gp-name">GP de Hungría · Hungaroring</div>
+              <div class="race-date"><i class="bi bi-calendar3 me-1"></i>26 de Julio, 2026</div>
+            </div>
+          </div>
+          <div class="circuit-img-wrapper flex-grow-1">
+            <img src="img/circuitos/hungria.jpg" alt="Circuito Hungaroring" class="circuit-img">
+          </div>
+          <div class="d-flex justify-content-center py-2">
+            <span class="badge-equipo">BWT Alpine F1 Team</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-label">Grilla</div>
+              <div class="stat-value">P13</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Pos. Final</div>
+              <div class="stat-value">P15</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Puntos</div>
+              <div class="stat-value">0</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-label">Ganados</div>
+              <div class="stat-value" style="color:#ef4444;">-2</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- TABLA RESUMEN -->
+    <section class="mt-5">
+      <h2 class="fw-bold text-dark mb-4"><i class="bi bi-table text-primary me-2"></i>Tabla Resumen Temporada 2026</h2>
+      <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+        <div class="table-responsive">
+          <table class="table table-hover align-middle mb-0">
+            <thead class="table-dark">
+              <tr>
+                <th class="ps-4">Ronda</th>
+                <th>País</th>
+                <th>Fecha</th>
+                <th>Equipo</th>
+                <th class="text-center">Pos. Inicial</th>
+                <th class="text-center">Pos. Final</th>
+                <th class="text-center">Puntos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ps-4 fw-bold">R1</td>
+                <td>🇦🇺 Australia</td>
+                <td>08/03/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P16</td>
+                <td class="text-center">P14</td>
+                <td class="text-center">0</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R2</td>
+                <td>🇨🇳 China</td>
+                <td>15/03/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P12</td>
+                <td class="text-center"><span class="badge bg-success">P10</span></td>
+                <td class="text-center fw-bold text-primary">1</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R3</td>
+                <td>🇯🇵 Japón</td>
+                <td>29/03/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P15</td>
+                <td class="text-center">P16</td>
+                <td class="text-center">0</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R4</td>
+                <td>🇺🇸 Miami</td>
+                <td>03/05/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P8</td>
+                <td class="text-center"><span class="badge bg-success">P7</span></td>
+                <td class="text-center fw-bold text-primary">6</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R5</td>
+                <td>🇨🇦 Canadá</td>
+                <td>24/05/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P10</td>
+                <td class="text-center"><span class="badge bg-success">P6</span></td>
+                <td class="text-center fw-bold text-primary">8</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R6</td>
+                <td>🇲🇨 Mónaco</td>
+                <td>07/06/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P14</td>
+                <td class="text-center"><span class="badge bg-danger">NC</span></td>
+                <td class="text-center">0</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R7</td>
+                <td>🇪🇸 España</td>
+                <td>14/06/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P13</td>
+                <td class="text-center"><span class="badge bg-success">P8</span></td>
+                <td class="text-center fw-bold text-primary">4</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R8</td>
+                <td>🇦🇹 Austria</td>
+                <td>28/06/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P16</td>
+                <td class="text-center">P15</td>
+                <td class="text-center">0</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R9</td>
+                <td>🇬🇧 Gran Bretaña</td>
+                <td>05/07/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P19</td>
+                <td class="text-center"><span class="badge bg-danger">NC</span></td>
+                <td class="text-center">0</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R10</td>
+                <td>🇧🇪 Bélgica</td>
+                <td>19/07/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P11</td>
+                <td class="text-center"><span class="badge bg-success">P10</span></td>
+                <td class="text-center fw-bold text-primary">1</td>
+              </tr>
+              <tr>
+                <td class="ps-4 fw-bold">R11</td>
+                <td>🇭🇺 Hungría</td>
+                <td>26/07/2026</td>
+                <td>Alpine</td>
+                <td class="text-center">P13</td>
+                <td class="text-center">P15</td>
+                <td class="text-center">0</td>
+              </tr>
+            </tbody>
+            <tfoot class="table-light">
+              <tr class="fw-bold">
+                <td colspan="6" class="ps-4 text-end">Total Puntos Temporada 2026</td>
+                <td class="text-center text-primary fs-5">19</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -106,22 +645,27 @@
       <a class="footer-brand d-inline-flex align-items-center text-decoration-none mb-3" href="index.html">
         <span>FC43</span>
         <svg class="flag-icon ms-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="24" height="18">
-          <rect width="640" height="480" fill="#74acdf"/>
-          <rect width="640" height="160" y="160" fill="#fff"/>
-          <circle cx="320" cy="240" r="30" fill="#f6b40e"/>
+          <rect width="640" height="480" fill="#74acdf" />
+          <rect width="640" height="160" y="160" fill="#fff" />
+          <circle cx="320" cy="240" r="30" fill="#f6b40e" />
         </svg>
       </a>
       <p class="footer-text mb-1">Proyecto homenaje a Franco Colapinto.</p>
       <p class="footer-text mb-4">Hecho con HTML, CSS y Bootstrap.</p>
       <div class="d-flex justify-content-center align-items-center gap-3">
-        <a href="https://instagram.com" target="_blank" class="social-icon-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://twitter.com" target="_blank" class="social-icon-link" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://youtube.com" target="_blank" class="social-icon-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-        <a href="https://tiktok.com" target="_blank" class="social-icon-link" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="https://instagram.com" target="_blank" class="social-icon-link" aria-label="Instagram"><i
+            class="bi bi-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" class="social-icon-link" aria-label="Twitter"><i
+            class="bi bi-twitter-x"></i></a>
+        <a href="https://youtube.com" target="_blank" class="social-icon-link" aria-label="YouTube"><i
+            class="bi bi-youtube"></i></a>
+        <a href="https://tiktok.com" target="_blank" class="social-icon-link" aria-label="TikTok"><i
+            class="bi bi-tiktok"></i></a>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
