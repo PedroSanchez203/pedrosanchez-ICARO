@@ -4,7 +4,7 @@ import { useRecetasStore } from "../store/recetasStore";
 import { RecetaCard } from "../components/RecetaCard";
 
 export const MisRecetasPage = () => {
-  const [tabActivo, setTabActivo] = useState("propias");
+  const [tab, setTab] = useState("propias");
 
   const recetasPropias = useRecetasStore((state) => state.recetasPropias);
   const favoritos = useRecetasStore((state) => state.favoritos);
@@ -12,33 +12,33 @@ export const MisRecetasPage = () => {
 
   return (
     <div className="container">
-      <div className="header-section">
-        <h1>Mi Cuaderno de Recetas</h1>
-        <p>Gestioná tus recetas personales y tus platos favoritos.</p>
+      <div className="titulo-seccion">
+        <h1>Mis Recetas</h1>
+        <p>Tus recetas agregadas manualmente y las que guardaste como favoritas.</p>
       </div>
 
-      <div className="tab-botones">
+      <div className="barra-pestañas">
         <button
-          className={`tab-btn ${tabActivo === "propias" ? "activo" : ""}`}
-          onClick={() => setTabActivo("propias")}
+          className={`btn-pestaña ${tab === "propias" ? "activa" : ""}`}
+          onClick={() => setTab("propias")}
         >
-          Mis Creaciones ({recetasPropias.length})
+          Mis Recetas ({recetasPropias.length})
         </button>
         <button
-          className={`tab-btn ${tabActivo === "favoritos" ? "activo" : ""}`}
-          onClick={() => setTabActivo("favoritos")}
+          className={`btn-pestaña ${tab === "favoritos" ? "activa" : ""}`}
+          onClick={() => setTab("favoritos")}
         >
           Favoritos ({favoritos.length})
         </button>
       </div>
 
-      {tabActivo === "propias" && (
+      {tab === "propias" && (
         <div>
           {recetasPropias.length === 0 ? (
-            <div className="estado-mensaje">
-              <p>Todavía no agregaste ninguna receta propia.</p>
-              <Link to="/nueva" className="btn btn-primary" style={{ marginTop: "1rem" }}>
-                Crear mi primera receta
+            <div className="mensaje-estado">
+              <p>No tenés recetas propias creadas todavía.</p>
+              <Link to="/nueva" className="btn btn-ver" style={{ marginTop: "1rem", display: "inline-block" }}>
+                + Agregar mi primera receta
               </Link>
             </div>
           ) : (
@@ -55,13 +55,13 @@ export const MisRecetasPage = () => {
         </div>
       )}
 
-      {tabActivo === "favoritos" && (
+      {tab === "favoritos" && (
         <div>
           {favoritos.length === 0 ? (
-            <div className="estado-mensaje">
-              <p>No tenés recetas guardadas en favoritos.</p>
-              <Link to="/" className="btn btn-primary" style={{ marginTop: "1rem" }}>
-                Explorar recetas
+            <div className="mensaje-estado">
+              <p>No guardaste ninguna receta en favoritos.</p>
+              <Link to="/" className="btn btn-ver" style={{ marginTop: "1rem", display: "inline-block" }}>
+                Ver recetas disponibles
               </Link>
             </div>
           ) : (

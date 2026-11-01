@@ -13,28 +13,28 @@ export const HomePage = () => {
 
   return (
     <div className="container">
-      <div className="header-section">
-        <h1>Explorá Recetas de Cocina</h1>
-        <p>Buscá entre miles de recetas internacionales o agregá las tuyas propias.</p>
+      <div className="titulo-seccion">
+        <h1>Recetas de Cocina</h1>
+        <p>Encontrá ideas fáciles para cocinar o sumá tus propios platos al recetario.</p>
       </div>
 
       <Buscador onBuscar={(nuevoTermino) => setTermino(nuevoTermino)} />
 
       {loading && (
-        <div className="estado-mensaje">
-          <p>Cargando recetas deliciosas...</p>
+        <div className="mensaje-estado">
+          <p>Cargando recetas...</p>
         </div>
       )}
 
       {error && (
-        <div className="estado-mensaje" style={{ color: "#ef4444" }}>
-          <p>Ocurrió un error al buscar las recetas: {error}</p>
+        <div className="mensaje-estado error">
+          <p>Error al cargar las recetas: {error}</p>
         </div>
       )}
 
       {!loading && !error && recetas.length === 0 && (
-        <div className="estado-mensaje">
-          <p>No se encontraron recetas con el término "{termino}". Probá buscando en inglés (ej: beef, soup, salad, cake).</p>
+        <div className="mensaje-estado">
+          <p>No se encontraron resultados para "{termino}". Probá buscando en inglés (ej: beef, salad, rice, pasta).</p>
         </div>
       )}
 

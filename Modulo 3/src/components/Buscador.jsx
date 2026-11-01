@@ -9,15 +9,15 @@ export const Buscador = ({ onBuscar, valorInicial = "" }) => {
   };
 
   return (
-    <form className="buscador-box" onSubmit={handleSubmit}>
+    <form className="buscador-form" onSubmit={handleSubmit}>
       <input
         type="text"
         className="buscador-input"
-        placeholder="Buscar receta (ej: chicken, pasta, pizza)..."
+        placeholder="Buscar por ingrediente o comida (ej: pasta, chicken, cake)..."
         value={texto}
         onChange={(e) => setTexto(e.target.value)}
       />
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-buscar">
         Buscar
       </button>
     </form>

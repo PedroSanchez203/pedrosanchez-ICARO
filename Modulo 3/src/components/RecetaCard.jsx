@@ -13,47 +13,45 @@ export const RecetaCard = ({ receta, onEliminar }) => {
   const titulo = receta.titulo || receta.strMeal;
   const categoria = receta.categoria || receta.strCategory || "General";
 
+  const handleFavorito = () => {
+    toggleFavorito({
+      id: receta.id || receta.idMeal,
+      titulo,
+      imagen,
+      categoria,
+      esPropia: receta.esPropia || false,
+    });
+  };
+
   return (
     <div className="receta-card">
       <img src={imagen} alt={titulo} className="receta-img" />
 
       <div className="receta-body">
-        <div className="receta-header">
-          <h3 className="receta-title">{titulo}</h3>
-          <button
-            className="btn-fav"
-            onClick={() =>
-              toggleFavorito({
-                id: receta.id || receta.idMeal,
-                titulo,
-                imagen,
-                categoria,
-                esPropia: receta.esPropia || false,
-              })
-            }
-            title={esFavorito ? "Quitar de favoritos" : "Guardar en favoritos"}
-          >
-            {esFavorito ? "❤️" : "🤍"}
-          </button>
-        </div>
+        <span className="receta-categoria">{categoria}</span>
+        <h3 className="receta-title">{titulo}</h3>
 
-        <span className="receta-badge">{categoria}</span>
-
-        <div className="receta-footer">
+        <div className="receta-acciones">
           <Link
             to={`/receta/${receta.id || receta.idMeal}`}
-            className="btn btn-primary"
+            className="btn btn-ver"
           >
-            Ver Detalle
+            Ver receta
           </Link>
+
+          <button
+            onClick={handleFavorito}
+            className={`btn btn-guardar ${esFavorito ? "guardado" : ""}`}
+          >
+            {esFavorito ? "★ Guardada" : "☆ Guardar"}
+          </button>
 
           {receta.esPropia && onEliminar && (
             <button
               onClick={() => onEliminar(receta.id)}
-              className="btn btn-danger"
-              title="Eliminar receta"
+              className="btn btn-borrar"
             >
-              Eliminar
+              Borrar
             </button>
           )}
         </div>

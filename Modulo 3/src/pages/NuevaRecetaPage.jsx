@@ -29,7 +29,7 @@ export const NuevaRecetaPage = () => {
     e.preventDefault();
 
     if (!formulario.titulo.trim() || !formulario.ingredientes.trim() || !formulario.pasos.trim()) {
-      setError("Por favor completa los campos obligatorios (título, ingredientes y pasos).");
+      setError("Por favor completa el nombre, los ingredientes y los pasos.");
       return;
     }
 
@@ -50,38 +50,34 @@ export const NuevaRecetaPage = () => {
 
   return (
     <div className="container">
-      <div className="header-section">
+      <div className="titulo-seccion">
         <h1>Agregar Nueva Receta</h1>
-        <p>Compartí tu receta casera para tenerla siempre a mano.</p>
+        <p>Carga una receta casera con sus ingredientes y pasos de preparación.</p>
       </div>
 
-      <div className="form-card">
-        {error && (
-          <div style={{ backgroundColor: "#fee2e2", color: "#b91c1c", padding: "0.8rem", borderRadius: "8px", marginBottom: "1rem" }}>
-            {error}
-          </div>
-        )}
+      <div className="formulario-box">
+        {error && <div className="alerta-error">{error}</div>}
 
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="titulo">Nombre de la receta *</label>
+          <div className="campo">
+            <label htmlFor="titulo">Nombre del plato *</label>
             <input
               type="text"
               id="titulo"
               name="titulo"
-              className="form-control"
-              placeholder="Ej: Ñoquis caseros de papa"
+              className="input-texto"
+              placeholder="Ej: Milanesas a la napolitana"
               value={formulario.titulo}
               onChange={handleChange}
             />
           </div>
 
-          <div className="form-group">
+          <div className="campo">
             <label htmlFor="categoria">Categoría</label>
             <select
               id="categoria"
               name="categoria"
-              className="form-control"
+              className="input-texto"
               value={formulario.categoria}
               onChange={handleChange}
             >
@@ -94,57 +90,59 @@ export const NuevaRecetaPage = () => {
             </select>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="tiempo">Tiempo de cocción (en minutos)</label>
+          <div className="campo">
+            <label htmlFor="tiempo">Tiempo aproximado (minutos)</label>
             <input
               type="number"
               id="tiempo"
               name="tiempo"
-              className="form-control"
-              placeholder="Ej: 45"
+              className="input-texto"
+              placeholder="Ej: 40"
               value={formulario.tiempo}
               onChange={handleChange}
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="imagen">URL de la imagen (opcional)</label>
+          <div className="campo">
+            <label htmlFor="imagen">Foto URL (opcional)</label>
             <input
               type="url"
               id="imagen"
               name="imagen"
-              className="form-control"
-              placeholder="https://images.unsplash.com/..."
+              className="input-texto"
+              placeholder="https://..."
               value={formulario.imagen}
               onChange={handleChange}
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="ingredientes">Ingredientes (uno por línea) *</label>
+          <div className="campo">
+            <label htmlFor="ingredientes">Ingredientes (uno por renglón) *</label>
             <textarea
               id="ingredientes"
               name="ingredientes"
-              className="form-control"
-              placeholder="1 kg de papas&#10;300 gr de harina&#10;1 huevo&#10;Sal y nuez moscada"
+              className="input-texto"
+              rows="5"
+              placeholder="500g carne de nalga&#10;2 huevos batidos&#10;Pan rallado&#10;Queso muzzarella&#10;Salsa de tomate"
               value={formulario.ingredientes}
               onChange={handleChange}
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="pasos">Pasos de preparación *</label>
+          <div className="campo">
+            <label htmlFor="pasos">Pasos para preparar *</label>
             <textarea
               id="pasos"
               name="pasos"
-              className="form-control"
-              placeholder="1. Hervir las papas con cáscara...&#10;2. Pelar y hacer puré...&#10;3. Amasar con harina y huevo..."
+              className="input-texto"
+              rows="5"
+              placeholder="1. Pasar la carne por huevo y pan rallado.&#10;2. Freír o dorar al horno.&#10;3. Agregar salsa, queso y gratinar."
               value={formulario.pasos}
               onChange={handleChange}
             />
           </div>
 
-          <button type="submit" className="btn btn-primary" style={{ width: "100%", marginTop: "1rem" }}>
+          <button type="submit" className="btn btn-submit">
             Guardar Receta
           </button>
         </form>

@@ -48,17 +48,17 @@ export const RecetaDetallePage = () => {
 
   if (loading && !esLocal) {
     return (
-      <div className="container estado-mensaje">
-        <p>Cargando los detalles de la receta...</p>
+      <div className="container mensaje-estado">
+        <p>Cargando receta...</p>
       </div>
     );
   }
 
   if ((error || !receta) && !loading) {
     return (
-      <div className="container estado-mensaje">
-        <p>No se pudo encontrar la receta solicitada.</p>
-        <button onClick={() => navigate(-1)} className="btn btn-secondary" style={{ marginTop: "1rem" }}>
+      <div className="container mensaje-estado">
+        <p>No se encontró la receta solicitada.</p>
+        <button onClick={() => navigate(-1)} className="btn btn-volver" style={{ marginTop: "1rem" }}>
           Volver atrás
         </button>
       </div>
@@ -70,24 +70,24 @@ export const RecetaDetallePage = () => {
     receta.imagen ||
     receta.strMealThumb ||
     "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&auto=format&fit=crop&q=60";
-  const categoria = receta.categoria || receta.strCategory || "Plato Principal";
-  const origen = receta.strArea || (receta.tiempo ? `${receta.tiempo} minutos` : "Casera");
-  const instrucciones = receta.pasos || receta.strInstructions || "No hay instrucciones disponibles.";
+  const categoria = receta.categoria || receta.strCategory || "Cocina";
+  const origen = receta.strArea || (receta.tiempo ? `${receta.tiempo} min` : "Casera");
+  const instrucciones = receta.pasos || receta.strInstructions || "No se detallaron pasos.";
   const ingredientes = obtenerIngredientes(receta);
 
   return (
     <div className="container">
-      <button onClick={() => navigate(-1)} className="btn btn-outline" style={{ marginBottom: "1.5rem" }}>
-        &larr; Volver
+      <button onClick={() => navigate(-1)} className="btn btn-volver">
+        ← Volver
       </button>
 
-      <div className="detalle-card">
-        <div className="detalle-hero">
-          <img src={imagen} alt={titulo} />
+      <div className="detalle-box">
+        <div className="detalle-encabezado">
+          <img src={imagen} alt={titulo} className="detalle-img" />
 
-          <div className="detalle-info">
-            <span className="receta-badge">{categoria} • {origen}</span>
-            <h1>{titulo}</h1>
+          <div className="detalle-datos">
+            <span className="detalle-etiqueta">{categoria} • {origen}</span>
+            <h2>{titulo}</h2>
 
             <button
               onClick={() =>
@@ -99,28 +99,26 @@ export const RecetaDetallePage = () => {
                   esPropia: Boolean(receta.esPropia),
                 })
               }
-              className="btn btn-primary"
+              className={`btn btn-guardar ${esFavorito ? "guardado" : ""}`}
               style={{ marginTop: "1rem", alignSelf: "flex-start" }}
             >
-              {esFavorito ? "❤️ Guardada en Favoritos" : "🤍 Agregar a Favoritos"}
+              {esFavorito ? "★ Guardada en favoritos" : "☆ Guardar en favoritos"}
             </button>
           </div>
         </div>
 
-        <div className="detalle-seccion">
-          <h3>Ingredientes necesarios</h3>
-          <div className="ingredientes-grid">
+        <div className="detalle-bloque">
+          <h3>Ingredientes</h3>
+          <ul className="ingredientes-lista">
             {ingredientes.map((item, index) => (
-              <div key={index} className="ingrediente-item">
-                • {item}
-              </div>
+              <li key={index}>- {item}</li>
             ))}
-          </div>
+          </ul>
         </div>
 
-        <div className="detalle-seccion">
-          <h3>Instrucciones paso a paso</h3>
-          <p className="instrucciones-texto">{instrucciones}</p>
+        <div className="detalle-bloque">
+          <h3>Preparación</h3>
+          <p className="texto-pasos">{instrucciones}</p>
         </div>
       </div>
     </div>
