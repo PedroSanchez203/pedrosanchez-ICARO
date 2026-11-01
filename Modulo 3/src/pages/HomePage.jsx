@@ -1,0 +1,58 @@
+import { useState } from "react";
+import { useFetch } from "../hooks/useFetch";
+import { Buscador } from "../components/Buscador";
+import { RecetaCard } from "../components/RecetaCard";
+
+export const HomePage = () => {
+  const [termino, setTermino] = useState("chicken");
+
+  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${termino}`;
+  const { data, loading, error } = useFetch(url);
+
+  const recetas = data?.meals || [];
+
+  return (
+    <div className="container">
+      <div className="header-section">
+        <h1>Explorá Recetas de Cocina</h1>
+        <p>Buscá entre miles de recetas internacionales o agregá las tuyas propias.</p>
+      </div>
+
+      <Buscador onBuscar={(nuevoTermino) => setTermino(nuevoTermino)} />
+
+      {loading && (
+        <div className="estado-mensaje">
+          <p>Cargando recetas deliciosas...</p>
+        </div>
+      )}
+
+      {error && (
+        <div className="estado-mensaje" style={{ color: "#ef4444" }}>
+          <p>Ocurrió un error al buscar las recetas: {error}</p>
+        </div>
+      )}
+
+      {!loading && !error && recetas.length === 0 && (
+        <div className="estado-mensaje">
+          <p>No se encontraron recetas con el término "{termino}". Probá buscando en inglés (ej: beef, soup, salad, cake).</p>
+        </div>
+      )}
+
+      {!loading && !error && recetas.length > 0 && (
+        <div className="grid-recetas">
+          {recetas.map((meal) => (
+            <RecetaCard
+              key={meal.idMeal}
+              receta={{
+                id: meal.idMeal,
+                titulo: meal.strMeal,
+                imagen: meal.strMealThumb,
+                categoria: meal.strCategory,
+              }}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
